@@ -351,7 +351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 10
+  m_DragThreshold: 9
 --- !u!4 &981264160
 Transform:
   m_ObjectHideFlags: 0
@@ -620,8 +620,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878051255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -1.56, z: 5}
-  m_LocalScale: {x: 0.9999916, y: 0.9999916, z: 0.9999916}
+  m_LocalPosition: {x: 0.09, y: -0.095, z: 5}
+  m_LocalScale: {x: 0.8592949, y: 0.85733664, z: 0.8688898}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
