@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8907691743176263662}
   - component: {fileID: 6830754794778232976}
   - component: {fileID: -6808431017115415803}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player Lazer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
