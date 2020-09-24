@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject projectile;
     [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] GameObject explosionVFX;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,19 @@ public class Enemy : MonoBehaviour
         ProcessHit(damageDealer);
     }
 
+    IEnumerator ExplosionOfEnemy()
+    {
+        while (true)
+        {
+            GameObject explosionStart = Instantiate(
+                            explosionVFX,
+                            transform.position,
+                            Quaternion.identity) as GameObject;
+            yield return new WaitForSeconds(1f);
+            Destroy(explosionStart);
+        }
+    }
+
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
@@ -57,6 +71,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
+            StartCoroutine(ExplosionOfEnemy());
         }
     }
 }
