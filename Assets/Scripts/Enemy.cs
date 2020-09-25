@@ -6,12 +6,20 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float health = 100;
+
+    [Header("Shoot")]
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject projectile;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] GameObject explosionVFX;
+
+    [Header("Sound")]
+    [SerializeField] AudioClip deathSFX;
+    [SerializeField] [Range(0,1)] float deathSFXVolume = 0.7f;
+    [SerializeField] AudioClip shootSFX;
+    [SerializeField] [Range(0, 1)] float shootSFXVolume = 0.25f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +50,7 @@ public class Enemy : MonoBehaviour
                 transform.position,
                 Quaternion.identity) as GameObject;
         lazer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
+        AudioSource.PlayClipAtPoint(shootSFX, Camera.main.transform.position, shootSFXVolume);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -72,6 +81,7 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
             StartCoroutine(ExplosionOfEnemy());
+            AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSFXVolume);
         }
     }
 }

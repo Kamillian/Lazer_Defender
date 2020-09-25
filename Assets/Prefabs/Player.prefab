@@ -98,6 +98,10 @@ MonoBehaviour:
   moveSpeed: 10
   padding: 0.5
   health: 200
+  deathSFX: {fileID: 8300000, guid: 6c0147fcbd0bf9b4f8cfa403fe020ef8, type: 3}
+  deathSFXVolume: 0.8
+  shootSFX: {fileID: 8300000, guid: 233c32153a6e85b4d9ae9fe00397b3e7, type: 3}
+  shootSFXVolume: 0.1
   lazerPrefab: {fileID: 8967085154202386103, guid: 2f08323deea5cca419a61716876aefd8,
     type: 3}
   projectileSpeed: 20
