@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6392207826467085636}
   - component: {fileID: 1033373954609969958}
   - component: {fileID: -7856038025350958473}
-  - component: {fileID: -9188751867303541618}
+  - component: {fileID: -4253424272483688326}
+  - component: {fileID: 6846647367344196834}
   m_Layer: 11
-  m_Name: Enemy Lazer
+  m_Name: Enemy Lazer for Big Boy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 1572953649
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6428a779d58c03b4ea89571333078140, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a385ea6cb121434e9443f92ecc77a42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a6f74465278874b883980c206dccfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 200
 --- !u!50 &-7856038025350958473
 Rigidbody2D:
   serializedVersion: 4
@@ -118,8 +119,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &-9188751867303541618
-CapsuleCollider2D:
+--- !u!58 &-4253424272483688326
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,5 +133,18 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.13, y: 0.37}
-  m_Direction: 0
+  serializedVersion: 2
+  m_Radius: 0.185
+--- !u!114 &6846647367344196834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4354938748435406305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab8d7b9333fd42a791f636f48dffe5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedOfSpeed: 50
